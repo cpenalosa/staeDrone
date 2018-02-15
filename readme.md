@@ -6,7 +6,7 @@ The following provides the fields for the UAS data types. All data needs to be i
 The fields marked with an asterisk are already populated when you create the data source for your drone in stae. 
 
 | Field | Data type | Description | Validation | Example
-| ---   | --- 		| ---         | ---
+| ---   | --- 		| ---         | ---		   | ---
 |id*    | Text      | Represents an unmanned aircraft system (UAV/UAS/Drone). | Not empty | "UAS"
 |name*  | Text      | Descriptive name given to the UAS by the operator. | Not empty | "Drone Demo Test"
 |type   | Text      | Categorization of the UAS. |  Not empty, max character length: 2048 | "Delivery Drone"
