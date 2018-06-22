@@ -1,7 +1,7 @@
 ### Developer Documentation
 Below is a walkthrough with code samples on setting up a delivery drone registry and regulations in Stae. We'll start by looking up a city's existing drone registry. Then, we'll submit our drone to the city's registry and create a proposed delivery route. Next, we'll go over how cities can use Stae to develop a basic regulatory framework, consisting of altitude checks, airpsace usage fees, and designating the responsible agencies. Finally, we'll create an emergency landing zone for drone operators to use. 
 
-#### Data Type look up
+#### Drone Registry Look Up
 
 ```java
 import request from 'superagent'
@@ -16,7 +16,8 @@ request
 
 This returns a city's current drone registry. To find your city's municipalityId, edit the get request to ```'https://municipal.systems/v1/municipalities'``` to return a list of municipalities. Your personal api key is located on the **My Account** page.
 
-#### Sample code registers a drone into the city's drone registry. This code requires that UAS data source is created first along with a valid api key.
+#### Drone Registry Submission
+Sample code registers a drone into the city's drone registry. This code requires that UAS data source is created first along with a valid api key.
 
 ```java
 import request from 'superagent'
@@ -52,7 +53,8 @@ request
   })
 ```
 
-#### Sample code proposes a UAS flight path, start and end dates, along with a payment ID for any fees paid to perform this trip. This code requires that a UAS Trip data source is created along with a valid api key. 
+#### UAS Flight Path
+Sample code proposes a UAS flight path, start and end dates, along with a payment ID for any fees paid to perform this trip. This code requires that a UAS Trip data source is created along with a valid api key. 
 
 ```java
 import request from 'superagent'
@@ -108,7 +110,8 @@ request
 ```
 
 
-#### Sample code designates a UAS restriction zone, lists responsible agencies, and fees for airspace usage. This code requires that a UAS Restriction data source be created first along with a valid api key.
+#### UAS Restriction Zone
+Sample code designates a UAS restriction zone, lists responsible agencies, and fees for airspace usage. This code requires that a UAS Restriction data source be created first along with a valid api key.
 
 ```java
 import request from 'superagent'
@@ -167,7 +170,8 @@ request
   })
 ```  
 
-#### Sample code designates an emergency landing zone where a UAS can make emergency landings. This code requires that a UAS emergency landing zone data source be created first along with a valid api key.
+#### UAS Emergency Landing Zone
+Sample code designates an emergency landing zone where a UAS can make emergency landings. This code requires that a UAS emergency landing zone data source be created first along with a valid api key.
 
 ```java
 import request from 'superagent'
